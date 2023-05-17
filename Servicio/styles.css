@@ -2,25 +2,26 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:cursive ;
 }
 
 body {
   place-items: center;
   display: grid;
-  background-image: url(fondo.avif);
+  background-image: url(fondo.jpg);
   background-size: cover;
 }
 
 .div1 {
   padding: 50px;
   border-radius: 3px;
-  background-color: cornflowerblue;
+  background-color: rgb(141, 77, 4);
+  
 }
 
 .div2 {
   border-radius: 3px;
-  background-color: cornflowerblue;
+  background-color: rgb(141, 77, 4);
 }
 
 form {
