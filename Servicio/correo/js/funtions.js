@@ -1,4 +1,4 @@
-function (valor) {
+function setCookieContador(valor) {
   var fecha = new Date();
   fecha.setTime(fecha.getTime() + (1 * 24 * 60 * 60 * 1000));
   var expira = "expires=" + fecha.toUTCString();
