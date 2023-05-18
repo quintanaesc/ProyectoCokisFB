@@ -1,4 +1,13 @@
-function genera_tabla() {
+function (valor) {
+  var fecha = new Date();
+  fecha.setTime(fecha.getTime() + (1 * 24 * 60 * 60 * 1000));
+  var expira = "expires=" + fecha.toUTCString();
+  document.cookie = "contadorTabla" + "=" + valor + ";" + expira + ";path=/";
+}
+
+function genera_tabla(valor) {
+    // setea el contador de la tabla
+    setCookieContador(valor)
     // Obtener la referencia del elemento body
     var body = document.getElementsByTagName("section")[0];
   
@@ -49,6 +58,6 @@ function genera_tabla() {
   }
   
   function anterior_tabla(){}
-  
+
   function siguiente_tabla(){}
   
