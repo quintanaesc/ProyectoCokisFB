@@ -48,3 +48,7 @@ function genera_tabla() {
     tabla.setAttribute("border", "2");
   }
   
+  function anterior_tabla(){}
+  
+  function siguiente_tabla(){}
+  
