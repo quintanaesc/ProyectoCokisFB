@@ -33,7 +33,7 @@ if (isset($_COOKIE['id_empleado'])) {
         $username = $row['nickname'];
 
         // Muestra el nombre de usuario
-        echo '<li>'. $username .'</li>';
+        echo '<li>' . $username . '</li>';
     } else {
         echo "No se encontró ningún empleado";
     }
