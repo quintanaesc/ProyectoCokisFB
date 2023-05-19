@@ -1,3 +1,18 @@
+function username() {
+  // Realizar la solicitud AJAX al archivo PHP al cargar la página
+  $.ajax({
+    url: 'php/username.php',
+    method: 'GET',
+    success: function(response) {
+      // Actualizar el contenido del elemento con la respuesta del PHP
+      $('#resultadoPHP').html(response);
+    },
+    error: function() {
+      console.log('Error en la solicitud AJAX');
+    }
+  });
+}
+
 function setCookieContador(valor) {
   var fecha = new Date();
   fecha.setTime(fecha.getTime() + (1 * 24 * 60 * 60 * 1000));

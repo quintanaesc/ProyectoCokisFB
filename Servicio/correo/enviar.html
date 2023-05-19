@@ -12,13 +12,6 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/Icono.ICO" />
-  <a class="navbar-brand" href="index.html">
-    <span>
-      <?php include 'php/username.php'; ?>
-    </span>
-  </a>
-
-
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -32,52 +25,51 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
-
-
-
+  <!-- biblioteca jQuery  para funcion ajax-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script type="text/javascript" src="js/funtions.js"></script>
+  
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 
 
 </head>
 
-<body class="sub_page">
-  <div class="top_container ">
+<body class="sub_page" onload="username()">
     <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              <?php include 'username.php'; ?>
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html"> Recibidos <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="enviar.html"> Enviar </a>
-                </li>
-
-                <li class="nav-item ">
-                  <a class="nav-link" href="cuenta.html">Cuenta</a>
-                </li>
-
-              </ul>
-            </div>
-        </nav>
-      </div>
-    </header>
-  </div>
-  <!-- end header section -->
+    <div class="top_container ">
+      <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="correo.html">
+              <div id="resultadoPHP"></div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html"> Recibidos <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="enviar.html"> Enviar </a>
+                  </li>
+  
+                  <li class="nav-item ">
+                    <a class="nav-link" href="cuenta.html"> Cuenta </a>
+                  </li>
+  
+                </ul>
+              </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <!-- end header section -->
 
   <div class="common_style">
 
