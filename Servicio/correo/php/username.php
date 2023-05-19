@@ -1,5 +1,5 @@
 <?php
-// Verificar si la coki existe
+// Verificar si la cooki existe
 if (isset($_COOKIE['id_empleado'])) {
 
     // Obtiene el valor de la cookie
