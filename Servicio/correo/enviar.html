@@ -27,101 +27,105 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <!-- biblioteca jQuery  para funcion ajax-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
   <script type="text/javascript" src="js/funtions.js"></script>
-  
+
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 
 
 </head>
 
 <body class="sub_page" onload="username()">
-    <!-- header section strats -->
-    <div class="top_container ">
-      <header class="header_section">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="correo.html">
-              <div id="resultadoPHP"></div>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                <ul class="navbar-nav  ">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html"> Recibidos <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link" href="enviar.html"> Enviar </a>
-                  </li>
-  
-                  <li class="nav-item ">
-                    <a class="nav-link" href="cuenta.html"> Cuenta </a>
-                  </li>
-  
-                </ul>
-              </div>
-          </nav>
-        </div>
-      </header>
-    </div>
-    <!-- end header section -->
+  <!-- header section strats -->
+  <div class="top_container ">
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="correo.html">
+            <div id="resultadoPHP"></div>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="correo.html"> Recibidos <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="enviar.html"> Enviar </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="cuenta.html"> Cuenta </a>
+                </li>
+
+              </ul>
+            </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <!-- end header section -->
 
   <div class="common_style">
 
     <div class="DatoBox">
       <!-- about section -->
       <h3>
-        <section class="formDato" >
+        <section class="formDato">
           <h3>Mensaje</h3>
-            <h5>Para (correo): </h5>
-            <input class="contls" type="email" name="destinatario" id="destinatario" placeholder="ejempl@fino.com">
-            <h5>Asunto:</h5>
-            <input class="contls" type="text" name="nombres" id="nombres" >
-            <input class="contls" type="text" name="nombres" id="nombres" placeholder="Contenido">
-            <input class="botons" type="submit" value="Enviar">        
-          </section>   
-          <br><br><br><br><br>  
-      </h3>                         
-    </div>     
-      <!-- end about section -->
+          <h5>Para (correo): </h5>
+          <input class="contls" type="email" name="destinatario" id="destinatario" placeholder="ejempl@fino.com">
+          <h5>Asunto:</h5>
+          <input class="contls" type="text" name="nombres" id="nombres">
+          <input class="contls" type="text" name="nombres" id="nombres" placeholder="Contenido">
+          <input class="botons" type="submit" value="Enviar">
+        </section>
+        <br><br><br><br><br>
+      </h3>
     </div>
-
-
     <!-- end about section -->
-
   </div>
-  <section class="info_section layout_padding-top">
-    <div class="info_logo-box">
-      <h2>
-        FINO
-      </h2>
-    </div> 
-    <div class="container">
-      <div class="social_container">
 
-        <div class="social-box">
-          <a href="">
-            <img src="images/fb.png" alt="">
-          </a>
 
-          <a href="">
-            <img src="images/twitter.png" alt="">
-          </a>
-          <a href="">
-            <img src="images/linkedin.png" alt="">
-          </a>
-          <a href="">
-            <img src="images/instagram.png" alt="">
-          </a>
+  <!-- end about section -->
+
+  <!-- footer section -->
+  <footer>
+    <section class="info_section layout_padding-top">
+      <div class="info_logo-box">
+        <h2>
+          FINO
+        </h2>
+      </div>
+
+      <div class="container">
+        <div class="social_container">
+
+          <div class="social-box">
+            <a href="">
+              <img src="images/fb.png" alt="">
+            </a>
+
+            <a href="">
+              <img src="images/twitter.png" alt="">
+            </a>
+            <a href="">
+              <img src="images/linkedin.png" alt="">
+            </a>
+            <a href="">
+              <img src="images/instagram.png" alt="">
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </footer>
+  <!--end footer section -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>

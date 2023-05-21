@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Crear la cookie con el ID del empleado
         $id_empleado = $result['id_empleado'];
         setcookie('id_empleado', $id_empleado, time() + 3600, '/');
-        // Redirigir al usuario a la página index.html en la subcarpeta correo
+        // Redirigir al usuario a la página correo.html en la subcarpeta correo
         header('Location: correo/correo.html');
         exit;
     }

@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $statement->bindParam(':account', $account);
     // Ejecutar la insert
     $statement->execute();
-    // Redirigir al usuario a la página index.html en la subcarpeta correo
+    // Redirigir al usuario a la página correo.html en la subcarpeta correo
     header('Location: login.html');
     
 }
