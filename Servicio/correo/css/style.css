@@ -1,6 +1,9 @@
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #fefeff;
+  background-color: rgb(248, 178, 99);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .layout_padding {
@@ -115,7 +118,7 @@ a:focus {
 }
 
 .sub_page .top_container::before {
-  background-color: #44af92;
+  background-color: rgb(141, 77, 4);;
   background-image: none;
 }
 
@@ -126,7 +129,7 @@ a:focus {
   height: 75px;
   bottom: 20%;
   left: 6%;
-  background-color: #44af92;
+  background-color: rgb(141, 77, 4);;
 }
 
 
@@ -267,7 +270,7 @@ a:focus {
 
 
 .admission_section a {
-  background-color: #44af92;
+  background-color: rgb(141, 77, 4);;
   color: #fefeff;
 }
 
@@ -290,7 +293,7 @@ a:focus {
 
 
 .determine_section a {
-  background-color: #44af92;
+  background-color: rgb(141, 77, 4);;
   color: #fefeff;
 }
 
@@ -331,7 +334,7 @@ a:focus {
   width: 100px;
   height: 30px;
   border-radius: 20px;
-  background-color: #44af92;
+  background-color: rgb(141, 77, 4);;
 }
 
 .client_img-box::before {
@@ -396,7 +399,7 @@ a:focus {
 }
 
 .client_section .carousel-indicators li.active {
-  background-color: #44af92;
+  background-color: rgb(141, 77, 4);;
 }
 
 /* end client section */
@@ -471,7 +474,7 @@ a:focus {
 .info_logo-box h2 {
   font-weight: bold;
   padding: 5px 7px;
-  border-bottom: 1.5px solid #44af92
+  border-bottom: 1.5px solid rgb(141, 77, 4);
 }
 
 .info_section ul {
@@ -488,7 +491,7 @@ a:focus {
 }
 
 .info_section ul li a:hover {
-  color: #44af92;
+  color: rgb(141, 77, 4);;
 }
 
 .info_section h5 {
@@ -509,7 +512,7 @@ a:focus {
 }
 
 .info_section .form_container button {
-  background-color: #44af92;
+  background-color: rgb(141, 77, 4);;
   border: none;
   outline: none;
   color: #fff;
@@ -542,8 +545,12 @@ a:focus {
 
 /* footer section*/
 
+footer{
+  margin-top: auto;
+} 
+
 .footer_section {
-  background-color: #44af92;
+  background-color: rgb(0, 0, 0);;
   padding: 20px 15px;
   font-family: 'Poppins', sans-serif;
 
@@ -574,7 +581,8 @@ a:focus {
   background: #e4e8ec;
   padding: 30px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 2%;
+  margin-bottom: 2%;
   border-radius: 4px;
   font-family: 'calibri';
   color: rgb(0, 0, 0);
@@ -618,4 +626,5 @@ a:focus {
   margin: 16px 0;
   font-size: 16px;
 }
+
 /*Fin cuenta css*/

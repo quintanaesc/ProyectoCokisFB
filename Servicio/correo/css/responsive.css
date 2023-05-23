@@ -71,7 +71,7 @@
         width: 75px;
         height: 20px;
         border-radius: 20px;
-        background-color: #44af92;
+        background-color: rgb(141, 77, 4);;
     }
 
     .client_img-box::before {
