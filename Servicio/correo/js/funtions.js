@@ -13,18 +13,17 @@ function getCookieEmpleado(nombre) {
   return "";
 }
 
-function borrarCookie() {
-  var empleadoCookie = getCookie("id_empleado");
+function borrarCookieEmpleado() {
+  var empleadoCookie = getCookieEmpleado("id_empleado");;
   if (empleadoCookie !== "") {
     document.cookie = "id_empleado=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    alert("Cookie 'id_empleado' eliminada");
   } else {
     alert("La cookie 'id_empleado' no existe");
   }
 }
 
 function cerrarSecion(){
-  borrarCookie();
+  borrarCookieEmpleado();
   window.location.href = "../login.html";
 }
 
