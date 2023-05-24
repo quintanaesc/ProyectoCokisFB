@@ -1,11 +1,3 @@
-function verificarSesion() {
-  var empleadoCookie = getCookieEmpleado("id_empleado");
-  if (empleadoCookie !== "") {
-    // La cookie 'id_empleado' existe
-    window.location.href = "correo/correo.html";
-  } 
-}
-
 function getCookieEmpleado(nombre) {
   var nombreEQ = nombre + "=";
   var cookies = document.cookie.split(';');
@@ -20,6 +12,30 @@ function getCookieEmpleado(nombre) {
   }
   return "";
 }
+
+function borrarCookie() {
+  var empleadoCookie = getCookie("id_empleado");
+  if (empleadoCookie !== "") {
+    document.cookie = "id_empleado=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    alert("Cookie 'id_empleado' eliminada");
+  } else {
+    alert("La cookie 'id_empleado' no existe");
+  }
+}
+
+function cerrarSecion(){
+  borrarCookie();
+  window.location.href = "../login.html";
+}
+
+function verificarSesion() {
+  var empleadoCookie = getCookieEmpleado("id_empleado");
+  if (empleadoCookie !== "") {
+    // La cookie 'id_empleado' existe
+    window.location.href = "correo/correo.html";
+  } 
+}
+
 
 function username() {
   // Realizar la solicitud AJAX al archivo PHP al cargar la página
