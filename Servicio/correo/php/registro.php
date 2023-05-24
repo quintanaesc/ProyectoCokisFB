@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Ejecutar la insert
     $statement->execute();
     // Redirigir al usuario a la página correo.html en la subcarpeta correo
-    header('Location: login.html');
+    header('Location: ../../login.html');
     
 }
 

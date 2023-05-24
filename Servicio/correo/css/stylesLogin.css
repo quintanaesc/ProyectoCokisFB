@@ -8,7 +8,7 @@ html, body {
 body {
   place-items: center;
   display: grid;
-  background-image: url(fondo.jpg);
+  background-image: url(../../fondo.jpg);
   background-size: cover;
 }
 
