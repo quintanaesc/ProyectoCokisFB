@@ -1,3 +1,26 @@
+function verificarSesion() {
+  var empleadoCookie = getCookieEmpleado("id_empleado");
+  if (empleadoCookie !== "") {
+    // La cookie 'id_empleado' existe
+    window.location.href = "correo/correo.html";
+  } 
+}
+
+function getCookieEmpleado(nombre) {
+  var nombreEQ = nombre + "=";
+  var cookies = document.cookie.split(';');
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i];
+    while (cookie.charAt(0) === ' ') {
+      cookie = cookie.substring(1, cookie.length);
+    }
+    if (cookie.indexOf(nombreEQ) === 0) {
+      return cookie.substring(nombreEQ.length, cookie.length);
+    }
+  }
+  return "";
+}
+
 function username() {
   // Realizar la solicitud AJAX al archivo PHP al cargar la página
   $.ajax({
