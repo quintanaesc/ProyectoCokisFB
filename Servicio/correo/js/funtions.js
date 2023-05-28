@@ -58,57 +58,55 @@ function setCookieContador(valor) {
   document.cookie = "contadorTabla" + "=" + valor + ";" + expira + ";path=/";
 }
 
-function genera_tabla(valor) {
-    // setea el contador de la tabla
-    setCookieContador(valor)
-    // Obtener la referencia del elemento body
-    var body = document.getElementsByTagName("section")[0];
+function creaEncabezados(tabla) {
+  let encabezados = ["Remitente", "Asunto", "Contenido", "Fecha de envío"];
+  var hilera = document.createElement("tr");
   
-    // Crea un elemento <table> y un elemento <tbody>
-    var tabla   = document.createElement("table");
-    var tblBody = document.createElement("tbody");
-    //Crea encabezados
-    let encabezado = ["Remitente", "Asunto","Contenido","Fecha de envio"]
-   
-    var hilera = document.createElement("tr");
-    for (var j = 0; j < 4; j++) {
-        // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-        // texto sea el contenido de <td>, ubica el elemento <td> al final
-        // de la hilera de la tabla
-        var celda = document.createElement("td");
-        var textoCelda = document.createTextNode(encabezado[j]);
-        celda.appendChild(textoCelda);
-        hilera.appendChild(celda);
-    }
-
-    // agrega la hilera al final de la tabla (al final del elemento tblbody)
-    tblBody.appendChild(hilera);
-
-    // Crea las celdas
-    for (var i = 0; i < 10; i++) {
-      // Crea las hileras de la tabla
-      var hilera = document.createElement("tr");
-      for (var j = 0; j < 4; j++) {
-        // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-        // texto sea el contenido de <td>, ubica el elemento <td> al final
-        // de la hilera de la tabla
-        var celda = document.createElement("td");
-        var textoCelda = document.createTextNode("celda en la hilera "+i+", columna "+j);
-        celda.appendChild(textoCelda);
-        hilera.appendChild(celda);
-      }
-  
-      // agrega la hilera al final de la tabla (al final del elemento tblbody)
-      tblBody.appendChild(hilera);
-    }
-  
-    // posiciona el <tbody> debajo del elemento <table>
-    tabla.appendChild(tblBody);
-    // appends <table> into <body>
-    body.appendChild(tabla);
-    // modifica el atributo "border" de la tabla y lo fija a "2";
-    tabla.setAttribute("border", "2");
+  for (var j = 0; j < encabezados.length; j++) {
+    var celda = document.createElement("td");
+    var textoCelda = document.createTextNode(encabezados[j]);
+    celda.appendChild(textoCelda);
+    hilera.appendChild(celda);
   }
+  
+  tabla.appendChild(hilera);
+}
+
+function creaCelda(texto) {
+  var celda = document.createElement("td");
+  var textoCelda = document.createTextNode(texto);
+  celda.appendChild(textoCelda);
+  return celda;
+}
+
+function creaHilera(datos) {
+  var hilera = document.createElement("tr");
+  
+  for (var j = 0; j < datos.length; j++) {
+    var celda = creaCelda(datos[j]);
+    hilera.appendChild(celda);
+  }
+  
+  return hilera;
+}
+
+function generaTabla() {
+  var body = document.getElementsByTagName("section")[0];
+  var tabla = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+  
+  creaEncabezados(tblBody);
+  
+  for (var i = 0; i < 10; i++) {
+    var datos = ["celda en la hilera " + i + ", columna 0", "celda en la hilera " + i + ", columna 1", "celda en la hilera " + i + ", columna 2", "celda en la hilera " + i + ", columna 3"];
+    var hilera = creaHilera(datos);
+    tblBody.appendChild(hilera);
+  }
+  
+  tabla.appendChild(tblBody);
+  body.appendChild(tabla);
+  tabla.setAttribute("border", "2");
+}
   
   function anterior_tabla(){}
 
