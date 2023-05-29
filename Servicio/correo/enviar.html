@@ -68,13 +68,14 @@
     <h3>
       <section class="formDato">
         <h4>Cambiar datos de usuario</h4>
-        <form method="POST">
+        <form action="php/enviar.php" method="POST">
           <h3>Mensaje</h3>
           <h5>Para (correo): </h5>
           <input class="contls" type="email" name="destinatario" id="destinatario" placeholder="ejempl@fino.com">
           <h5>Asunto:</h5>
-          <input class="contls" type="text" name="nombres" id="nombres">
-          <input class="contls" type="text" name="nombres" id="nombres" placeholder="Contenido">
+          <input class="contls" type="text" name="asunto" id="asunto">
+          <h5>Contenido:</h5>
+          <input class="contls" type="text" name="contenido" id="contenido" placeholder="Contenido">
           <input class="botons" type="submit" value="Enviar">
         </form>
       </section>
