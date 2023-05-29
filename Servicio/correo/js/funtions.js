@@ -93,6 +93,7 @@ function creaHilera(datos) {
 function generaTabla(datos) {
   var body = document.getElementsByTagName("section")[0];
   var tabla = document.createElement("table");
+  tabla.id = "correos";
   var tblBody = document.createElement("tbody");
   
   creaEncabezados(tblBody);
@@ -124,7 +125,13 @@ function correos() {
   });
 }
 
-
+function refrescarCorreos() {
+  var tabla = document.getElementById("correos");
+  if (tabla) {
+    tabla.parentNode.removeChild(tabla);
+  }
+  correos();
+}
 
   
   
