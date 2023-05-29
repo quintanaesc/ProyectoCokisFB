@@ -59,7 +59,7 @@ function setCookieContador(valor) {
 }
 
 function creaEncabezados(tabla) {
-  let encabezados = ["Remitente", "Asunto", "Contenido", "Fecha de envío"];
+  let encabezados = ["Remitente", "Asunto", "Contenido", "Fecha de envio"];
   var hilera = document.createElement("tr");
   
   for (var j = 0; j < encabezados.length; j++) {
@@ -90,16 +90,17 @@ function creaHilera(datos) {
   return hilera;
 }
 
-function generaTabla() {
+function generaTabla(datos) {
   var body = document.getElementsByTagName("section")[0];
   var tabla = document.createElement("table");
   var tblBody = document.createElement("tbody");
   
   creaEncabezados(tblBody);
   
-  for (var i = 0; i < 10; i++) {
-    var datos = ["celda en la hilera " + i + ", columna 0", "celda en la hilera " + i + ", columna 1", "celda en la hilera " + i + ", columna 2", "celda en la hilera " + i + ", columna 3"];
-    var hilera = creaHilera(datos);
+  for (var i = 0; i < datos.length; i++) {
+    var fila = datos[i];
+    var datosFila = [fila.remitente, fila.asunto, fila.contenido, fila.fecha_envio];
+    var hilera = creaHilera(datosFila); // Pasar los datos como parámetro
     tblBody.appendChild(hilera);
   }
   
@@ -107,8 +108,23 @@ function generaTabla() {
   body.appendChild(tabla);
   tabla.setAttribute("border", "2");
 }
-  
-  function anterior_tabla(){}
 
-  function siguiente_tabla(){}
+
+function correos() {
+  $.ajax({
+    url: 'php/correos.php',
+    method: 'GET',
+    dataType: 'json',
+    success: function(datos) {
+      generaTabla(datos.correos);
+    },
+    error: function() {
+      console.log('Error al obtener los datos del archivo PHP.');
+    }
+  });
+}
+
+
+
+  
   
