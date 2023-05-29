@@ -67,13 +67,12 @@
     <h3>
       <section class="formDato">
         <h4>Cambiar datos de usuario</h4>
-        <form method="POST">
-          <input class="contls" type="text" name="username" id="username" placeholder="Ingresa tu nombre de usuario">
+        <form action="php/cuenta.php" method="POST">
+          <input class="contls" type="text" name="username" id="username" placeholder="Ingresa tu nuevo nombre de usuario">
           <input class="contls" type="email" name="account" id="account"
-            placeholder="Ingresa tu Correo Electronico: ejempl@fino.com">
-          <input class="contls" type="password" name="password" id="password" placeholder="Ingresa tu Contraseña">
-          <input class="contls" type="password" name="pass_confirm" id="pass_confirm"
-            placeholder="Confirma tu Contraseña">
+            placeholder="Ingresa tu nuevo Correo Electronico: ejempl@fino.com">
+          <input class="contls" type="password" name="password" id="password" placeholder="Ingresa tu nueva Contraseña">
+          <input class="contls" type="password" name="pass_confirm" id="pass_confirm" placeholder="Confirma tu Contraseña">
           <input class="botons" type="submit" value="Cambiar">
         </form>
       </section>
