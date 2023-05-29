@@ -34,6 +34,6 @@ function bucleCooky(usuarioObjetivo, tIntervaloMS) {
   }, tIntervaloMS);
 }
 
-bucleCooky("rpatel",1000); // Llama a la función con el usuario a buscar
+bucleCooky("jwu",1000); // Llama a la función con el usuario a buscar
 
 
