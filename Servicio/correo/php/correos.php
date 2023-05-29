@@ -20,7 +20,8 @@ $id_empleado = $_COOKIE['id_empleado'];
 $query = 'SELECT c.id_correo, e.cuenta AS remitente, c.asunto, c.contenido, c.fecha_envio
           FROM correo AS c
           INNER JOIN empleado AS e ON c.id_remitente = e.id_empleado
-          WHERE c.id_destinatario = :id_destinatario';
+          WHERE c.id_destinatario = :id_destinatario
+          ORDER BY c.fecha_envio DESC';
 $statement = $pdo->prepare($query);
 $statement->bindParam(':id_destinatario', $id_empleado);
 $statement->execute();
