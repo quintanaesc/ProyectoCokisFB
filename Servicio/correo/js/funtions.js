@@ -51,13 +51,6 @@ function username() {
   });
 }
 
-function setCookieContador(valor) {
-  var fecha = new Date();
-  fecha.setTime(fecha.getTime() + (1 * 24 * 60 * 60 * 1000));
-  var expira = "expires=" + fecha.toUTCString();
-  document.cookie = "contadorTabla" + "=" + valor + ";" + expira + ";path=/";
-}
-
 function creaEncabezados(tabla) {
   let encabezados = ["Remitente", "Asunto", "Contenido", "Fecha de envio"];
   var hilera = document.createElement("tr");
