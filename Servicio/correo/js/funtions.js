@@ -87,6 +87,7 @@ function generaTabla(datos) {
   var body = document.getElementsByTagName("section")[0];
   var tabla = document.createElement("table");
   tabla.id = "correos";
+  tabla.style.width = "100%"; // Tabla ocupa todo el ancho del contenedor
   var tblBody = document.createElement("tbody");
   
   creaEncabezados(tblBody);
