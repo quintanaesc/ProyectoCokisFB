@@ -1,6 +1,8 @@
 # ProyectoCokisFB
 Proyetco final para T.E. en seguridad; CTF en Automatización de vulneración de cokis por  fuerza bruta
 
+El proyecto en cuestión se presenta como un reto CTF, en el cual los participantes se registran en una página web y se convierten en usuarios dentro de esta plataforma simulada. Una vez dentro, el objetivo del reto consiste en vulnerar los datos de otros usuarios registrados en la página para obtener su información personal a través de la manipulación o configuración de las cookies. Es importante destacar que todos estos usuarios e información son ficticios, creados por nosotros mismos para el propósito del proyecto.
+
 Tutoriales de instalacion
 
     Instalar xammp (vercion de instalador 8.0)
